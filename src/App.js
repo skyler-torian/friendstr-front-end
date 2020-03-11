@@ -34,6 +34,12 @@ handleLogin = (event) => {
   currentUser: data}))
 }
 
+handleLogout = () => {
+  this.setState =({
+    currentUser: null
+  })
+}
+
 
   render() {
     
@@ -43,6 +49,13 @@ handleLogin = (event) => {
         <div className='App'>
 
           <Switch>
+
+            <Route exact path="/profile">
+            <Profile 
+              currentUser={this.state.currentUser} 
+              handleLogout={this.handleLogout}
+            />
+            </Route>
 
             <Route exact path="/profile" render={()=>{
               return !this.state.currentUser?
@@ -55,11 +68,6 @@ handleLogin = (event) => {
               <Login />
             </Route>
 
-            <Route exact path="/profile">
-            <Profile 
-              currentUser={this.state.currentUser} 
-            />
-            </Route>
 
             <Route exact path="/">
             <Home 

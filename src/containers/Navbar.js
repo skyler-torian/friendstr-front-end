@@ -5,7 +5,7 @@ class Navbar extends React.Component {
         return (
             <div>
             <div>Navbar Container</div>
-            <input type="submit" value="Logout"/>
+            <input onClick={this.props.handleLogout} type="submit" value="Logout"/>
             </div>
         )
     }

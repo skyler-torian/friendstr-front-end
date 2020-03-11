@@ -6,13 +6,13 @@ class Profile extends React.Component {
     render() {
         return (
             <div>
-                <Navbar />
+                <Navbar handleLogout={this.props.handleLogout}/>
             <div>
                
-                {this.props.currentUser.map(user => <ProfileCard 
+                {/* {this.props.currentUser.map(user => <ProfileCard 
                 key={user.id}
                 user={user}
-            />)}
+            />)} */}
                
             </div>
             </div>
