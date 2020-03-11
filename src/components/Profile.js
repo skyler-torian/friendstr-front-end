@@ -1,10 +1,18 @@
 import React from 'react'
+import ProfileCard from './ProfileCard'
 
 class Profile extends React.Component {
     render() {
-        console.log("currentUser is:", this.props.currentUser)
         return (
-            <div>Profile Component</div>
+            <div>
+                {this.props.currentUser.map(user => <ProfileCard 
+                key={user.id}
+                user={user}
+            
+            
+            />)}
+               
+            </div>
         )
     }
 }

@@ -1,4 +1,10 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
 // import Games from './components/Games'
 import Profile from './components/Profile'
 import Login from './components/Login'
@@ -32,8 +38,12 @@ handleLogin = (event) => {
     
     return (
         <div>
-          < Login loginSubmit={this.handleLogin}/>
-          < Profile currentUser={this.state.currentUser} />
+          <Login 
+            loginSubmit={this.handleLogin}
+          />
+          {/* <Profile 
+            currentUser={this.state.currentUser} 
+          /> */}
           
         </div>
     )
