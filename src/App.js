@@ -8,6 +8,7 @@ import {
 // import Games from './components/Games'
 import Profile from './components/Profile'
 import Login from './components/Login'
+import Home from './components/Home'
 import './App.css';
 
 class App extends React.Component {
@@ -46,10 +47,15 @@ handleLogin = (event) => {
               loginSubmit={this.handleLogin}
             />
             </Route>
-            
+
             <Route exact path="/profile">
             <Profile 
               currentUser={this.state.currentUser} 
+            />
+            </Route>
+
+            <Route exact path="/">
+            <Home 
             />
             </Route>
           
