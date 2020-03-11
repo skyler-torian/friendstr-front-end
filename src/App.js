@@ -41,16 +41,19 @@ handleLogin = (event) => {
       <Router>
         
         <div className='App'>
+
           <Switch>
-            <Route exact path='/login'>
-              <Login />
-            </Route>
 
             <Route exact path="/profile" render={()=>{
+              console.log("Routing currentUser to Profile:", this.state.currentUser)
               return !this.state.currentUser?
               <Redirect to='/login'/> : 
               <Profile currentUser={this.state.currentUser}/>
             }}>
+            </Route>
+            
+            <Route exact path='/login'>
+              <Login />
             </Route>
 
             <Route exact path="/profile">
