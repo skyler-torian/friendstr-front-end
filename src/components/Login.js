@@ -5,9 +5,15 @@ class Login extends React.Component {
         return (
             <div>
                 <form onSubmit={this.props.loginSubmit}>
-                    <input type='text' placeholder="username"/>
-                    <input type='password' placeholder="password"/>
-                    <input type='submit' value='Login'/>
+                    <div>
+                        <input type='text' placeholder="username"/>
+                    </div>
+                    <div>
+                        <input type='password' placeholder="password"/>
+                    </div>
+                    <div>
+                        <input type='submit' value='Login'/>
+                    </div>
                 </form>
             </div>
         )
