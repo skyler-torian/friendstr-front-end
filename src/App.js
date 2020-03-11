@@ -37,15 +37,25 @@ handleLogin = (event) => {
   render() {
     
     return (
-        <div>
-          <Login 
-            loginSubmit={this.handleLogin}
-          />
-          {/* <Profile 
-            currentUser={this.state.currentUser} 
-          /> */}
+      <Router>
+        
+        <div className='App'>
+          <Switch>
+            <Route exact path="/login">
+            <Login 
+              loginSubmit={this.handleLogin}
+            />
+            </Route>
+            
+            <Route exact path="/profile">
+            <Profile 
+              currentUser={this.state.currentUser} 
+            />
+            </Route>
           
+          </Switch>
         </div>
+      </Router>
     )
 }
 }
