@@ -42,10 +42,15 @@ handleLogin = (event) => {
         
         <div className='App'>
           <Switch>
-            <Route exact path="/login">
-            <Login 
-              loginSubmit={this.handleLogin}
-            />
+            <Route exact path='/login'>
+              <Login />
+            </Route>
+
+            <Route exact path="/profile" render={()=>{
+              return !this.state.currentUser?
+              <Redirect to='/login'/> : 
+              <Profile currentUser={this.state.currentUser}/>
+            }}>
             </Route>
 
             <Route exact path="/profile">
