@@ -31,8 +31,9 @@ handleLogin = (event) => {
     })
 }).then(res => res.json())
 .then(data => this.setState({
-  currentUser: data}))
-}
+  currentUser: data
+}))}
+
 
 handleLogout = () => {
   this.setState =({
@@ -50,22 +51,22 @@ handleLogout = () => {
 
           <Switch>
 
-            <Route exact path="/profile">
+            {/* <Route exact path="/profile">
             <Profile 
               currentUser={this.state.currentUser} 
               handleLogout={this.handleLogout}
             />
-            </Route>
+            </Route> */}
 
             <Route exact path="/profile" render={()=>{
-              return !this.state.currentUser?
-              <Redirect to='/login'/> : 
-              <Profile currentUser={this.state.currentUser}/>
+              return !this.state.currentUser? 
+              <Redirect to='/login'/> : <Profile currentUser={this.state.currentUser}/>
+              
             }}>
             </Route>
 
-            <Route exact path='/login'>
-              <Login />
+            <Route exact path='/login'> 
+            <Login handleLogin={this.handleLogin}/>
             </Route>
 
 
