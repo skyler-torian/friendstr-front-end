@@ -66,13 +66,13 @@ handleLogout = () => {
             </Route>
 
             <Route exact path='/login'> 
-            <Login handleLogin={this.handleLogin}/>
+              <Login handleLogin={this.handleLogin}/>
             </Route>
 
 
             <Route exact path="/">
-            <Home 
-            />
+              <Home 
+              />
             </Route>
           
           </Switch>
