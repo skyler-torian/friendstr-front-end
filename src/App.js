@@ -14,7 +14,16 @@ import './App.css';
 class App extends React.Component {
   
  state = {
-    currentUser: null
+    currentUser:{ 
+    bio:"Just here to have some fun. I love playing Destiny 2",
+    created_at:"2020-03-10T21:12:03.954Z",
+    id:16,
+    name:"Skyler",
+    profile_picture:"nothing.jpg",
+    updated_at:"2020-03-10T21:12:03.954Z",
+    username:"skyler1"
+    }
+    
   }
 
 
@@ -58,12 +67,16 @@ handleLogout = () => {
             />
             </Route> */}
 
-            <Route exact path="/profile" render={()=>{
+            <Route exact path='/profile'>
+              <Profile currentUser={this.state.currentUser} />
+            </Route>
+
+            {/* <Route exact path="/profile" render={()=>{
               return !this.state.currentUser? 
               <Redirect to='/login'/> : <Profile currentUser={this.state.currentUser}/>
               
             }}>
-            </Route>
+            </Route> */}
 
             <Route exact path='/login'> 
               <Login handleLogin={this.handleLogin}/>
