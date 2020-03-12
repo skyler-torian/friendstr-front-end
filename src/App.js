@@ -52,6 +52,7 @@ handleLogout = () => {
   this.setState =({
     currentUser: null
   })
+  
 }
 
 handleRouteToGames =()=> {

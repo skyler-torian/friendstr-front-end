@@ -1,14 +1,10 @@
 import React from 'react'
 import {
-    BrowserRouter as Router,
-    Switch,
-    Link,
-    Route,
-    Redirect
+    Link
   } from "react-router-dom";
 
 // import Navbar from '../containers/Navbar'
-import Games from '../components/Games'
+// import Games from '../components/Games'
 
 class Profile extends React.Component {
 
