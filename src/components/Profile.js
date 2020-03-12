@@ -26,11 +26,11 @@ class Profile extends React.Component {
                 
                 {this.props.currentUser? 
                 <div>
-                <p>{this.props.currentUser.profile_picture}</p>
+                <p><img src={this.props.currentUser.profile_picture}/></p>
 
-                <p>{this.props.currentUser.username}</p>
+                <h4>{this.props.currentUser.username}'s profile</h4>
 
-                <p>{this.props.currentUser.bio}</p>
+                <p>Bio: {this.props.currentUser.bio}</p>
 
                 <Link to='/match'>Find Friends</Link>
                 <Link to='/games'>Find Games</Link> 
