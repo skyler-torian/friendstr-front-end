@@ -12,7 +12,7 @@ class Navbar extends React.Component {
         return (
             <div>
             <div>Navbar Container</div>
-            {/* <Link to='/' onClick={()=>this.props.handleLogout()}>Logout</Link> */}
+            <button type="submit" placeholder="Logout" onClick={()=>this.props.handleLogout()}>Logout</button>
             </div>
         )
     }
