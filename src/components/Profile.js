@@ -9,7 +9,6 @@ import {
 class Profile extends React.Component {
 
     state={
-        user: this.props.currentUser,
         redirect: false
     }
 
