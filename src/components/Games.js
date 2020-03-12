@@ -8,7 +8,9 @@ class Games extends React.Component{
 
     handleGameSearch=(e)=>{
         e.preventDefault()
-        fetch(`https://api.rawg.io/api/games/${e.target.firstElementChild.value}`)
+        let search = e.target.firstElementChild.value
+        let sanitizedSearch = search.replace(/ /g,"-")
+        fetch(`https://api.rawg.io/api/games/${sanitizedSearch}`)
         .then(res => res.json())
         .then(game => this.setState({
             searchedGame: game
