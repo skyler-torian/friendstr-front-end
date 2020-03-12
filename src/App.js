@@ -9,20 +9,23 @@ import {
 import Profile from './components/Profile'
 import Login from './components/Login'
 import Home from './components/Home'
+import Navbar from './containers/Navbar'
+
 import './App.css';
 
 class App extends React.Component {
   
  state = {
-    currentUser:{ 
-    bio:"Just here to have some fun. I love playing Destiny 2",
-    created_at:"2020-03-10T21:12:03.954Z",
-    id:16,
-    name:"Skyler",
-    profile_picture:"nothing.jpg",
-    updated_at:"2020-03-10T21:12:03.954Z",
-    username:"skyler1"
-    }
+   currentUser: null
+    // currentUser:{ 
+    // bio:"Just here to have some fun. I love playing Destiny 2",
+    // created_at:"2020-03-10T21:12:03.954Z",
+    // id:16,
+    // name:"Skyler",
+    // profile_picture:"nothing.jpg",
+    // updated_at:"2020-03-10T21:12:03.954Z",
+    // username:"skyler1"
+    // }
     
   }
 
@@ -54,6 +57,9 @@ handleLogout = () => {
   render() {
     
     return (
+      <div>
+      <Navbar handleLogout={this.handleLogout}/>
+      
       <Router>
         
         <div className='App'>
@@ -91,6 +97,7 @@ handleLogout = () => {
           </Switch>
         </div>
       </Router>
+      </div>
     )
 }
 }

@@ -12,7 +12,9 @@ class Login extends React.Component {
         redirect: false
     }
 
-    handleButton=()=>{
+    handleButton=(e)=>{
+        e.preventDefault()
+        this.props.handleLogin(e)
         this.setState({
             redirect: true
         })
@@ -24,7 +26,7 @@ class Login extends React.Component {
         }
         return (
             <div>
-                <form onSubmit={this.props.handleLogin} >
+                <form onSubmit={this.handleButton} >
                 <input type='text' placeholder="username"/>
                 <input type='password' placeholder="password"/>
                 <input type='submit' value='Login'/>

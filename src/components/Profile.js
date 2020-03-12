@@ -7,8 +7,9 @@ class Profile extends React.Component {
         console.log("in Profile:", this.props.currentUser)
         return (
             <div>
-                <Navbar handleLogout={this.props.handleLogout}/>
-
+               
+                {this.props.currentUser? 
+                <div>
                 <p>{this.props.currentUser.profile_picture}</p>
 
                 <p>{this.props.currentUser.username}</p>
@@ -16,8 +17,10 @@ class Profile extends React.Component {
                 <p>{this.props.currentUser.bio}</p>
 
                 <button type="submit" value="searchGames">Search Games</button>
-                <button type="submit" value="searchFriends">Find Friends</button>
-
+                <button type="submit" value="searchFriends">Find Friends</button> </div> : 
+                null
+                
+    }  
             </div>
             
             
