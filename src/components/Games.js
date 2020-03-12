@@ -1,4 +1,5 @@
 import React from 'react'
+import '../css/Games.css';
 
 class Games extends React.Component{
 
@@ -28,7 +29,7 @@ class Games extends React.Component{
                 </form>
             </div>
             <div>
-            <div><img src={this.state.searchedGame.background_image}/></div>
+            <div ><img src={this.state.searchedGame.background_image} className="game-art"/></div>
             <div><h3>Game Title: {this.state.searchedGame.name}</h3></div>
             {/* {this.state.searchedGame.genres[0]} */}
             <div><p>Description: {this.state.searchedGame.description_raw}</p></div>
