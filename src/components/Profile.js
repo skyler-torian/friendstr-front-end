@@ -33,7 +33,8 @@ class Profile extends React.Component {
                 <p>{this.props.currentUser.bio}</p>
 
                 <Link to='/match'>Find Friends</Link>
-                <Link to='/games'>Find Games</Link> </div>: 
+                <Link to='/games'>Find Games</Link> 
+                </div> : 
                 null
                 
     }  

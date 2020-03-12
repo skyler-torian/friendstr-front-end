@@ -4,7 +4,7 @@ import '../css/Games.css';
 class Games extends React.Component{
 
     state={
-        searchedGame:[]
+        searchedGame: null
     }
 
     handleGameSearch=(e)=>{
@@ -23,18 +23,29 @@ class Games extends React.Component{
             <div>
             <div>
                 <h3>Search for a game</h3>
+
                 <form onSubmit={(e)=> this.handleGameSearch(e)}>
-                <input type="text" placeholder="Search!"/>
-                <input type="submit"/>
+                    <input type="text" placeholder="Search!"/>
+                    <input type="submit"/>
                 </form>
             </div>
             <div>
-            <div ><img src={this.state.searchedGame.background_image} className="game-art"/></div>
-            <div><h3>Game Title: {this.state.searchedGame.name}</h3></div>
-            {/* {this.state.searchedGame.genres[0]} */}
-            <div><p>Description: {this.state.searchedGame.description_raw}</p></div>
-            </div>
+                {this.state.searchedGame? 
+             <div>
 
+                <div><img src={this.state.searchedGame.background_image} className="game-art"/></div>
+
+                <button type="submit">Add to Collection</button>
+
+                <div><h3>{this.state.searchedGame.name}</h3></div>
+                    
+                <div>{this.state.searchedGame.genres.forEach((genre)=> {return genre.name})}</div>
+
+                <div><h5>Description:</h5> <p>{this.state.searchedGame.description_raw}</p></div>
+            </div> : null }
+           
+
+            </div>
             </div>
             
         )
