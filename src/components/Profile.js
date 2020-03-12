@@ -20,15 +20,14 @@ class Profile extends React.Component {
     handleGamesButton=(e)=>{
         console.log("clicking the searchGames button")
         e.preventDefault()
-        return(<Redirect to='/games'/>)
-        
+        return(<Link to={this.props.toGames}/>)
         
     }
     render() {
        
         return (
             <div>
-               
+                
                 {this.props.currentUser? 
                 <div>
                 <p>{this.props.currentUser.profile_picture}</p>
@@ -37,9 +36,8 @@ class Profile extends React.Component {
 
                 <p>{this.props.currentUser.bio}</p>
 
-                <Link to='/games'>Find Games</Link>
-             
-                <button type="submit" value="searchFriends">Find Friends</button> </div> : 
+                <Link to='/match'>Find Friends</Link>
+                <Link to='/games'>Find Games</Link> </div>: 
                 null
                 
     }  
