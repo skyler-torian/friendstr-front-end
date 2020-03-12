@@ -1,10 +1,31 @@
 import React from 'react'
-import ProfileCard from './ProfileCard'
-import Navbar from '../containers/Navbar'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Link,
+    Route,
+    Redirect
+  } from "react-router-dom";
+
+// import Navbar from '../containers/Navbar'
+import Games from '../components/Games'
 
 class Profile extends React.Component {
+
+    state={
+        user: this.props.currentUser,
+        redirect: false
+    }
+
+    handleGamesButton=(e)=>{
+        console.log("clicking the searchGames button")
+        e.preventDefault()
+        return(<Redirect to='/games'/>)
+        
+        
+    }
     render() {
-        console.log("in Profile:", this.props.currentUser)
+       
         return (
             <div>
                
@@ -16,7 +37,8 @@ class Profile extends React.Component {
 
                 <p>{this.props.currentUser.bio}</p>
 
-                <button type="submit" value="searchGames">Search Games</button>
+                <Link to='/games'>Find Games</Link>
+             
                 <button type="submit" value="searchFriends">Find Friends</button> </div> : 
                 null
                 

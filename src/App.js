@@ -10,6 +10,7 @@ import Profile from './components/Profile'
 import Login from './components/Login'
 import Home from './components/Home'
 import Navbar from './containers/Navbar'
+import Games from './components/Games'
 
 import './App.css';
 
@@ -53,6 +54,10 @@ handleLogout = () => {
   })
 }
 
+handleRouteToGames =()=> {
+  return(<Games/>)
+}
+
 
   render() {
     
@@ -61,28 +66,22 @@ handleLogout = () => {
       <Navbar handleLogout={this.handleLogout}/>
       
       <Router>
-        
         <div className='App'>
-
           <Switch>
-
-            {/* <Route exact path="/profile">
-            <Profile 
-              currentUser={this.state.currentUser} 
-              handleLogout={this.handleLogout}
-            />
-            </Route> */}
-
-            <Route exact path='/profile'>
-              <Profile currentUser={this.state.currentUser} />
+             <Route exact path='/profile'>
+                <Profile currentUser={this.state.currentUser} toGames={this.handleRouteToGames}/>
             </Route>
 
-            {/* <Route exact path="/profile" render={()=>{
+            <Route exact path="/profile" render={()=>{
               return !this.state.currentUser? 
-              <Redirect to='/login'/> : <Profile currentUser={this.state.currentUser}/>
-              
+              <Redirect to='/login'/> : <Profile currentUser={this.state.currentUser} toGames={this.handleRouteToGames}/>
             }}>
-            </Route> */}
+            </Route>
+              
+            <Route exact path='/games'> 
+              <Games currentUser={this.state.currentUser}/>
+            </Route>
+
 
             <Route exact path='/login'> 
               <Login handleLogin={this.handleLogin}/>
