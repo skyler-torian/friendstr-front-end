@@ -68,9 +68,15 @@ handleLogout = () => {
       <div>
       
       <Router>
+
       <Navbar handleLogout={this.handleLogout}/>
         <div className='App'>
           <Switch>
+          <Route exact path="/">
+              <Home 
+              />
+            </Route>
+            
              <Route exact path='/profile'>
                 <Profile currentUser={this.state.currentUser} toGames={this.handleRouteToGames}/>
             </Route>
@@ -90,11 +96,6 @@ handleLogout = () => {
               <Login handleLogin={this.handleLogin}/>
             </Route>
 
-
-            <Route exact path="/">
-              <Home 
-              />
-            </Route>
           
           </Switch>
         </div>

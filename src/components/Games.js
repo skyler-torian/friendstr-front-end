@@ -19,7 +19,15 @@ class Games extends React.Component{
     }
 
     collectionHandler=()=>{
-        console.log("adding to collection", this.state.searchedGame.id, this.props.currentUser.id)
+        let gameName = this.state.searchedGame.name
+        let gameGenre = this.state.searchedGame.genres[0].name
+        let gameDesc = this.state.searchedGame.description_raw
+        let userId = this.props.currentUser.id
+
+       
+
+        console.log("adding to collection", this.state.searchedGame.name, this.state.searchedGame.genres[0].name, this.state.searchedGame.description_raw, this.state.searchedGame.background_image, this.props.currentUser.id)
+        
     }
 
     render() {
