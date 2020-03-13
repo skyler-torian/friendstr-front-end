@@ -19,7 +19,7 @@ class Games extends React.Component{
     }
 
     collectionHandler=()=>{
-        console.log("adding to collection")
+        console.log("adding to collection", this.state.searchedGame.id, this.props.currentUser.id)
     }
 
     render() {
