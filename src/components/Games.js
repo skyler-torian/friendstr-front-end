@@ -24,6 +24,7 @@ class Games extends React.Component{
         let gameDesc = this.state.searchedGame.description_raw
         let userId = this.props.currentUser.id
         let apiKey = this.state.searchedGame.id
+        let coverArt = this.state.searchedGame.background_image
 
        fetch('http://localhost:3000/user_games',{
        method: "POST",
@@ -32,7 +33,7 @@ class Games extends React.Component{
            'Accept': 'application/json'
         },
         body: JSON.stringify({
-            user_id:userId, desc:gameDesc, genre:gameGenre, name:gameName, apiGameId:apiKey
+            user_id:userId, desc:gameDesc, genre:gameGenre, name:gameName, apiGameId:apiKey, coverArt:coverArt
         })
        }
     
