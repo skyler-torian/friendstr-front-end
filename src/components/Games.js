@@ -23,10 +23,24 @@ class Games extends React.Component{
         let gameGenre = this.state.searchedGame.genres[0].name
         let gameDesc = this.state.searchedGame.description_raw
         let userId = this.props.currentUser.id
+        let apiKey = this.state.searchedGame.id
 
-       
+       fetch('http://localhost:3000/user_games',{
+       method: "POST",
+       headers: {
+           'Content-Type': 'application/json',
+           'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            user_id:userId, desc:gameDesc, genre:gameGenre, name:gameName, apiGameId:apiKey
+        })
+       }
+    
+    
+       )
 
-        console.log("adding to collection", this.state.searchedGame.name, this.state.searchedGame.genres[0].name, this.state.searchedGame.description_raw, this.state.searchedGame.background_image, this.props.currentUser.id)
+
+        console.log("adding to collection", this.state.searchedGame.id, this.state.searchedGame.name, this.state.searchedGame.genres[0].name, this.state.searchedGame.description_raw, this.state.searchedGame.background_image, this.props.currentUser.id)
         
     }
 
