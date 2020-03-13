@@ -18,6 +18,10 @@ class Games extends React.Component{
         }))
     }
 
+    collectionHandler=()=>{
+        console.log("adding to collection")
+    }
+
     render() {
         return (
             <div>
@@ -35,11 +39,11 @@ class Games extends React.Component{
 
                 <div><img src={this.state.searchedGame.background_image} className="game-art"/></div>
 
-                <button type="submit">Add to Collection</button>
+                <button type="submit" onClick={()=>this.collectionHandler()}>Add to Collection</button>
 
                 <div><h3>{this.state.searchedGame.name}</h3></div>
                     
-                <div>{this.state.searchedGame.genres.forEach((genre)=> {return genre.name})}</div>
+                <div>Genre: {this.state.searchedGame.genres.map((genre)=> { return genre.name+ " "})}</div>
 
                 <div><h5>Description:</h5> <p>{this.state.searchedGame.description_raw}</p></div>
             </div> : null }

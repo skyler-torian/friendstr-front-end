@@ -25,7 +25,7 @@ class Profile extends React.Component {
                 
                 {this.props.currentUser? 
                 <div>
-                <p><img src={this.props.currentUser.profile_picture}/></p>
+                <img src={this.props.currentUser.profile_picture}/>
 
                 <h4>{this.props.currentUser.username}'s profile</h4>
 

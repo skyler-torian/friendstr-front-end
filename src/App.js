@@ -23,7 +23,7 @@ class App extends React.Component {
     created_at:"2020-03-10T21:12:03.954Z",
     id:16,
     name:"Skyler",
-    profile_picture:"https://www.shutterstock.com/image-photo/picture-smiling-handsome-businessman-office-265383200",
+    profile_picture:"none.jpg",
     updated_at:"2020-03-10T21:12:03.954Z",
     username:"skyler1"
     }
@@ -47,26 +47,28 @@ handleLogin = (event) => {
   currentUser: data
 }))}
 
-
+//function is called, but user isn't actually set to null. Also needs to redirect to / when there is no user
 handleLogout = () => {
   this.setState =({
     currentUser: null
   })
+  console.log("logging out", this.state.currentUser)
+  return(<Redirect to='/'/>)
   
 }
 
-handleRouteToGames =()=> {
-  return(<Games/>)
-}
+// handleRouteToGames =()=> {
+//   return(<Games/>)
+// }
 
 
   render() {
     
     return (
       <div>
-      <Navbar handleLogout={this.handleLogout}/>
       
       <Router>
+      <Navbar handleLogout={this.handleLogout}/>
         <div className='App'>
           <Switch>
              <Route exact path='/profile'>
