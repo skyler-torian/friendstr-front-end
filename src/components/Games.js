@@ -22,7 +22,7 @@ class Games extends React.Component{
 
     platformHandler=(e)=>{
         e.preventDefault()
-        
+        console.log(e.target.value)
        this.setState({
            gamePlatform: e.target.value
        })
@@ -81,7 +81,7 @@ class Games extends React.Component{
                     <p>Select a Platform</p>
                     <form>
                     <select onChange={(e)=> this.platformHandler(e)}>
-                    <option value="Xbox">Xbox</option>
+                    <option selected value="Xbox">Xbox</option>
                     <option value="Playstation 4">Playstation 4</option>
                     <option value="PC">PC</option>
                     </select>
