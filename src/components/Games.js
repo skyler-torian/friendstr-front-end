@@ -81,7 +81,8 @@ class Games extends React.Component{
                     <p>Select a Platform</p>
                     <form>
                     <select onChange={(e)=> this.platformHandler(e)}>
-                    <option selected value="Xbox">Xbox</option>
+                        <option defaultValue="Unkown">Choose a Platform</option>
+                    <option value="Xbox">Xbox</option>
                     <option value="Playstation 4">Playstation 4</option>
                     <option value="PC">PC</option>
                     </select>
