@@ -4,10 +4,12 @@ import '../css/Games.css';
 class Games extends React.Component{
 
     state={
-        searchedGame: null
+        searchedGame: null,
+        gamePlatform: null
     }
 
     handleGameSearch=(e)=>{
+        console.log(this.state.gamePlatform)
         e.preventDefault()
         let search = e.target.firstElementChild.value
         let sanitizedSearch = search.replace(/ /g,"-")
@@ -18,6 +20,15 @@ class Games extends React.Component{
         }))
     }
 
+    platformHandler=(e)=>{
+        e.preventDefault()
+        
+       this.setState({
+           gamePlatform: e.target.value
+       })
+    }
+
+
     collectionHandler=()=>{
         let gameName = this.state.searchedGame.name
         let gameGenre = this.state.searchedGame.genres[0].name
@@ -25,6 +36,7 @@ class Games extends React.Component{
         let userId = this.props.currentUser.id
         let apiKey = this.state.searchedGame.id
         let coverArt = this.state.searchedGame.background_image
+        let platform = this.state.gamePlatform
 
        fetch('http://localhost:3000/user_games',{
        method: "POST",
@@ -33,7 +45,7 @@ class Games extends React.Component{
            'Accept': 'application/json'
         },
         body: JSON.stringify({
-            user_id:userId, desc:gameDesc, genre:gameGenre, name:gameName, apiGameId:apiKey, coverArt:coverArt
+            user_id:userId, desc:gameDesc, genre:gameGenre, name:gameName, apiGameId:apiKey, coverArt:coverArt, platform: platform
         })
        }
     
@@ -41,7 +53,7 @@ class Games extends React.Component{
        )
 
 
-        console.log("adding to collection", this.state.searchedGame.id, this.state.searchedGame.name, this.state.searchedGame.genres[0].name, this.state.searchedGame.description_raw, this.state.searchedGame.background_image, this.props.currentUser.id)
+        console.log("adding to collection", this.state.searchedGame.id, this.state.searchedGame.name, this.state.searchedGame.genres[0].name, this.state.searchedGame.description_raw, this.state.searchedGame.background_image, this.props.currentUser.id, this.state.option)
         
     }
 
@@ -60,15 +72,31 @@ class Games extends React.Component{
                 {this.state.searchedGame? 
              <div>
 
-                <div><img src={this.state.searchedGame.background_image} className="game-art"/></div>
+                <div>
+                    <img src={this.state.searchedGame.background_image} className="game-art"/>
+                </div>
 
-                <button type="submit" onClick={()=>this.collectionHandler()}>Add to Collection</button>
+                <div>
+                
+                    <p>Select a Platform</p>
+                    <form>
+                    <select onChange={(e)=> this.platformHandler(e)}>
+                    <option value="Xbox">Xbox</option>
+                    <option value="Playstation 4">Playstation 4</option>
+                    <option value="PC">PC</option>
+                    </select>
+                    <button type="submit" onClick={()=>this.collectionHandler()}>Add to Collection</button>
+                    </form>
+               
+                </div>
 
                 <div><h3>{this.state.searchedGame.name}</h3></div>
-                    
-                <div>Genre: {this.state.searchedGame.genres.map((genre)=> { return genre.name+ " "})}</div>
-
-                <div><h5>Description:</h5> <p>{this.state.searchedGame.description_raw}</p></div>
+                    {this.state.searchedGame.genres?
+                <div>Genre: {this.state.searchedGame.genres.map((genre)=> { return genre.name+ " "})}</div> :
+                <p>Genres: Sorry! No genres were found for this title!</p>}
+                    {this.state.searchedGame.description_raw?
+                <div><h5>Description:</h5> <p>{this.state.searchedGame.description_raw}</p></div> :
+                <div><h5>Description: </h5> <p>Unfortunately we don't have a description for this game right now...</p></div>}
             </div> : null }
            
 
