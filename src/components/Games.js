@@ -9,7 +9,6 @@ class Games extends React.Component{
     }
 
     handleGameSearch=(e)=>{
-        console.log(this.state.gamePlatform)
         e.preventDefault()
         let search = e.target.firstElementChild.value
         let sanitizedSearch = search.replace(/ /g,"-")
@@ -29,7 +28,8 @@ class Games extends React.Component{
     }
 
 
-    collectionHandler=()=>{
+    collectionHandler=(e)=>{
+        e.preventDefault()
         let gameName = this.state.searchedGame.name
         let gameGenre = this.state.searchedGame.genres[0].name
         let gameDesc = this.state.searchedGame.description_raw
@@ -86,7 +86,7 @@ class Games extends React.Component{
                     <option value="Playstation 4">Playstation 4</option>
                     <option value="PC">PC</option>
                     </select>
-                    <button type="submit" onClick={()=>this.collectionHandler()}>Add to Collection</button>
+                    <button type="submit" onClick={(e)=>this.collectionHandler(e)}>Add to Collection</button>
                     </form>
                
                 </div>
