@@ -5,7 +5,6 @@ class GameCard extends React.Component {
     
 
     render() {
-        console.log(this.props.game)
         return (
             
             <div className="game-card">

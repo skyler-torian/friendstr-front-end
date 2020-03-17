@@ -9,7 +9,6 @@ class MyGames extends React.Component {
     }
 
     componentDidMount(){
-        console.log("current user:", this.props.currentUser)
         let currentUser = this.props.currentUser.id
          fetch(`http://localhost:3000/users/${currentUser}`)
          .then(res => res.json())
