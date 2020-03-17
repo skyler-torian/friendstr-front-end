@@ -1,5 +1,6 @@
 import React from 'react'
 import ShowGame from './ShowGame'
+import '../css/GameCard.css';
 
 class MyGames extends React.Component {
     
@@ -8,15 +9,16 @@ class MyGames extends React.Component {
     }
 
     componentDidMount(){
+        console.log("current user:", this.props.currentUser)
         let currentUser = this.props.currentUser.id
-         fetch(`http://localhost:3000/user_games/${currentUser}`)
+         fetch(`http://localhost:3000/users/${currentUser}`)
          .then(res => res.json())
          .then(data => this.setState({
              myGames: data
-             
          }))
+        }
          
-     }
+     
 
     render() {
         return (
@@ -25,6 +27,7 @@ class MyGames extends React.Component {
                     return<ShowGame 
                     key={game.id}
                     game={game}
+                    
                     />
                 })}
                 </div>

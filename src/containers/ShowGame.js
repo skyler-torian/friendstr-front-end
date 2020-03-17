@@ -5,9 +5,27 @@ class GameCard extends React.Component {
     
 
     render() {
-        console.log(this.props.game.game_id)
+        console.log(this.props.game)
         return (
-            <div>GameCard</div>
+            
+            <div className="game-card">
+                <div>
+                    <img src={this.props.game.cover_art} className="card-photo"/>
+                </div>
+
+                <div>
+                    {this.props.game.name}
+                </div>
+
+                <div>
+                    
+                </div>
+
+
+
+
+            </div>
+           
         )
     }
 }
