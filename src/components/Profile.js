@@ -1,4 +1,5 @@
 import React from 'react'
+// import MyGames from './containers/MyGames'
 import {
     Link
   } from "react-router-dom";
@@ -11,13 +12,7 @@ class Profile extends React.Component {
     state={
         redirect: false
     }
-
-    handleGamesButton=(e)=>{
-        console.log("clicking the searchGames button")
-        e.preventDefault()
-        return(<Link to={this.props.toGames}/>)
-        
-    }
+  
     render() {
        
         return (
@@ -31,6 +26,7 @@ class Profile extends React.Component {
 
                 <p>Bio: {this.props.currentUser.bio}</p>
 
+                <Link to='/mygames'>My Games Collection</Link>
                 <Link to='/match'>Find Friends</Link>
                 <Link to='/games'>Find Games</Link> 
                 </div> : 

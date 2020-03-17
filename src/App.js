@@ -11,6 +11,7 @@ import Login from './components/Login'
 import Home from './components/Home'
 import Navbar from './containers/Navbar'
 import Games from './components/Games'
+import MyGames from './containers/MyGames'
 
 import './App.css';
 
@@ -57,9 +58,6 @@ handleLogout = () => {
   
 }
 
-// handleRouteToGames =()=> {
-//   return(<Games/>)
-// }
 
 
   render() {
@@ -78,7 +76,7 @@ handleLogout = () => {
             </Route>
 
              <Route exact path='/profile'>
-                <Profile currentUser={this.state.currentUser} toGames={this.handleRouteToGames}/>
+                <Profile currentUser={this.state.currentUser}/>
             </Route>
 
             <Route exact path="/profile" render={()=>{
@@ -96,6 +94,9 @@ handleLogout = () => {
               <Login handleLogin={this.handleLogin}/>
             </Route>
 
+            <Route exact path='/mygames'>
+              <MyGames currentUser={this.state.currentUser}/>
+            </Route>
           
           </Switch>
         </div>

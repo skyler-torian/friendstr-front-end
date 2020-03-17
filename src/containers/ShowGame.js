@@ -1,11 +1,15 @@
 import React from 'react'
 
-class ShowGame extends React.Component {
+class GameCard extends React.Component {
+
+    
+
     render() {
+        console.log(this.props.game.game_id)
         return (
-            <div>ShowGame Container</div>
+            <div>GameCard</div>
         )
     }
 }
 
-export default ShowGame 
+export default GameCard 
