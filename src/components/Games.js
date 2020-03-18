@@ -51,9 +51,6 @@ class Games extends React.Component{
     
     
        )
-
-
-        console.log("adding to collection", this.state.searchedGame.id, this.state.searchedGame.name, this.state.searchedGame.genres[0].name, this.state.searchedGame.description_raw, this.state.searchedGame.background_image, this.props.currentUser.id, this.state.option)
         
     }
 
