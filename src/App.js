@@ -12,6 +12,7 @@ import Home from './components/Home'
 import Navbar from './containers/Navbar'
 import Games from './components/Games'
 import MyGames from './containers/MyGames'
+import SignUp from './containers/SignUp'
 
 import './App.css';
 
@@ -65,7 +66,7 @@ handleLogout = () => {
       <div>
       
       <Router>
-
+      <SignUp />
       <Navbar handleLogout={this.handleLogout}/>
         <div className='App'>
           <Switch>
