@@ -3,6 +3,7 @@ import React from 'react'
 import {
     Link
   } from "react-router-dom";
+  import '../css/Profile.css';
 
 // import Navbar from '../containers/Navbar'
 // import Games from '../components/Games'
@@ -20,7 +21,7 @@ class Profile extends React.Component {
                 
                 {this.props.currentUser? 
                 <div>
-                <img src={this.props.currentUser.profile_picture}/>
+                <img src={this.props.currentUser.profile_picture} className="profile-photo"/>
 
                 <h4>{this.props.currentUser.username}'s profile</h4>
 
