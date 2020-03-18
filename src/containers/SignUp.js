@@ -12,10 +12,10 @@ class SignUp extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit>
-                    <textarea></textarea>
-                    <textarea></textarea>
-                    <textarea></textarea>
+                <form onSubmit={()=>this.signUpHandler()}>
+                    <textarea placeholder="Name"></textarea>
+                    <textarea placeholder="Username"></textarea>
+                    <textarea placeholder="Bio"></textarea>
                 </form>
 
 
