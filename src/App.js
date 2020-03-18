@@ -53,8 +53,7 @@ handleLogout = () => {
   this.setState =({
     currentUser: null
   })
-  console.log("logging out", this.state.currentUser)
-  return(<Redirect to='/'/>)
+  (<Redirect to='/'/>)
   
 }
 
