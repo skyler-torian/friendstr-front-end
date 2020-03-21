@@ -1,5 +1,5 @@
 import React from 'react'
-// import MyGames from './containers/MyGames'
+import FavGames from './containers/FavGames'
 import {
     Link
   } from "react-router-dom";
@@ -22,7 +22,7 @@ class Profile extends React.Component {
                 
                 {this.props.currentUser? 
                 <div>
-                <img src={this.props.currentUser.profile_picture} className="profile-photo"/>
+                <img src={this.props.currentUser.profile_picture} alt="A profile picture" className="profile-photo"/>
 
                 <h4>{this.props.currentUser.username}'s profile</h4>
 
@@ -43,9 +43,7 @@ class Profile extends React.Component {
                 </button>
             </div>
             <div className="game-display">
-                    <div className="game-card">
-
-                    </div>
+                   <FavGames />
             </div>
 
                 </div> : 
