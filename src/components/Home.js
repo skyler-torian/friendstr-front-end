@@ -8,12 +8,12 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <div>Home Component</div>
-            <div>
-                <button>
+                <div className="welcome-banner">Welcome to Friendstr!</div>
+            <div className="home-buttons">
+                <button className="login-button">
                     <Link to="/login">Login</Link>
                 </button>
-                <button>
+                <button className="signup-button">
                  <Link to="/signup">Sign Up</Link>
                 </button>
             </div>
