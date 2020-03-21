@@ -21,7 +21,6 @@ class Games extends React.Component{
 
     platformHandler=(e)=>{
         e.preventDefault()
-        console.log(e.target.value)
        this.setState({
            gamePlatform: e.target.value
        })

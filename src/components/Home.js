@@ -8,7 +8,7 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <div className="welcome-banner">Welcome to Friendstr!</div>
+                <div className="welcome-banner"><h3>Welcome to Friendstr!</h3></div>
             <div className="home-buttons">
                 <button className="login-button">
                     <Link to="/login">Login</Link>

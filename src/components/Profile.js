@@ -5,7 +5,7 @@ import {
   } from "react-router-dom";
   import '../css/Profile.css';
 
-// import Navbar from '../containers/Navbar'
+import Navbar from '../containers/Navbar'
 // import Games from '../components/Games'
 
 class Profile extends React.Component {
@@ -18,6 +18,7 @@ class Profile extends React.Component {
        
         return (
             <div>
+                <Navbar currentUser={this.props.currentUser} handleLogout={this.props.handleLogout}/>
                 
                 {this.props.currentUser? 
                 <div>
@@ -40,6 +41,11 @@ class Profile extends React.Component {
                 <button>
                 <Link to='/games'>Find Games</Link> 
                 </button>
+            </div>
+            <div className="game-display">
+                    <div className="game-card">
+
+                    </div>
             </div>
 
                 </div> : 

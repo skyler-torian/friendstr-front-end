@@ -1,4 +1,5 @@
 import React from 'react';
+import Fragment from 'react'
 import {
   BrowserRouter as Router,
   Switch,
@@ -73,18 +74,6 @@ handleLogout = () => {
               />
             </Route>
 
-             <Route exact path='/profile'>
-                <Navbar handleLogout={this.handleLogout}/>
-                <Profile currentUser={this.state.currentUser}/> 
-            </Route>
-
-            <Route exact path="/profile" render={()=>{
-              return !this.state.currentUser? 
-              <Redirect to='/login'/> : <Profile currentUser={this.state.currentUser} toGames={this.handleRouteToGames}/>
-              
-            }}>
-            </Route>
-
             <Route exact path='/login'> 
               <Login handleLogin={this.handleLogin}/>
             </Route>
@@ -92,11 +81,26 @@ handleLogout = () => {
             <Route exact path='/signup'>
               <SignUp />
             </Route>
+
+            <Route exact path="/profile" render={()=>{
+              return !this.state.currentUser? 
+              <Redirect to='/'/> :
+              <Profile currentUser={this.state.currentUser} toGames={this.handleRouteToGames} handleLogout={this.handleLogout}/>
               
-            <Route exact path='/games'> 
-              <Navbar handleLogout={this.handleLogout}/>
-              <Games currentUser={this.state.currentUser}/>
+            }}>
             </Route>
+
+
+              
+            <Route exact path="/games" render={()=>{
+              return !this.state.currentUser? 
+              <Redirect to='/'/> :
+                <Games currentUser={this.state.currentUser}/>
+             
+            }}>
+            </Route>
+
+           
 
 
 
