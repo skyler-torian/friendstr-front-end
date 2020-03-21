@@ -5,7 +5,6 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-// import Games from './components/Games'
 import Profile from './components/Profile'
 import Login from './components/Login'
 import Home from './components/Home'
@@ -66,8 +65,7 @@ handleLogout = () => {
       <div>
       
       <Router>
-      <SignUp />
-      <Navbar handleLogout={this.handleLogout}/>
+     
         <div className='App'>
           <Switch>
           <Route exact path="/">
@@ -76,25 +74,34 @@ handleLogout = () => {
             </Route>
 
              <Route exact path='/profile'>
-                <Profile currentUser={this.state.currentUser}/>
+                <Navbar handleLogout={this.handleLogout}/>
+                <Profile currentUser={this.state.currentUser}/> 
             </Route>
 
             <Route exact path="/profile" render={()=>{
               return !this.state.currentUser? 
               <Redirect to='/login'/> : <Profile currentUser={this.state.currentUser} toGames={this.handleRouteToGames}/>
+              
             }}>
             </Route>
-              
-            <Route exact path='/games'> 
-              <Games currentUser={this.state.currentUser}/>
-            </Route>
-
 
             <Route exact path='/login'> 
               <Login handleLogin={this.handleLogin}/>
             </Route>
 
+            <Route exact path='/signup'>
+              <SignUp />
+            </Route>
+              
+            <Route exact path='/games'> 
+              <Navbar handleLogout={this.handleLogout}/>
+              <Games currentUser={this.state.currentUser}/>
+            </Route>
+
+
+
             <Route exact path='/mygames'>
+              <Navbar handleLogout={this.handleLogout}/>
               <MyGames currentUser={this.state.currentUser}/>
             </Route>
           

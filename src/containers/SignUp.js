@@ -69,20 +69,20 @@ class SignUp extends React.Component {
                     </h4>
                 </div>
                 <form onSubmit={(e)=>this.signUpHandler(e)}>
-                    <div>
-                        <input type="text" placeholder="Name" onChange={(e)=> this.nameHandler(e)}></input>
+                    <div><div>Name: </div>
+                        <input type="text" placeholder="" onChange={(e)=> this.nameHandler(e)}></input>
                     </div>
 
-                    <div>
-                        <input type="text" placeholder="Username" onChange={(e)=> this.userNameHandler(e)}></input>
+                    <div><div>Username: </div>
+                        <input type="text" placeholder="" onChange={(e)=> this.userNameHandler(e)}></input>
                     </div>
 
-                    <div>
-                    <input type="text" placeholder="Add a profile picture" onChange={(e)=> this.profilePicHandler(e)}></input>
+                    <div><div>Profile Picture: </div>
+                    <input type="text" placeholder="" onChange={(e)=> this.profilePicHandler(e)}></input>
                     </div>
 
-                    <div>
-                        <textarea placeholder="Bio" onChange={(e)=> this.bioHandler(e)}></textarea>
+                    <div><div>Bio </div>
+                        <textarea placeholder="Tell us a little about yourself!" onChange={(e)=> this.bioHandler(e)}></textarea>
                     </div>
                         <input type="submit"></input>
                 </form>

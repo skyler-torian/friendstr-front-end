@@ -26,10 +26,22 @@ class Profile extends React.Component {
                 <h4>{this.props.currentUser.username}'s profile</h4>
 
                 <p>Bio: {this.props.currentUser.bio}</p>
-
-                <Link to='/mygames'>My Games Collection</Link>
-                <Link to='/match'>Find Friends</Link>
+            <div>
+                <button>
+                    <Link to='/mygames'>My Games Collection</Link>
+                </button>
+            </div>
+            <div>
+                <button>
+                    <Link to='/match'>Find Friends</Link>
+                </button>
+            </div>
+            <div>
+                <button>
                 <Link to='/games'>Find Games</Link> 
+                </button>
+            </div>
+
                 </div> : 
                 null
                 
