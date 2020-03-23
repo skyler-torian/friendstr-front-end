@@ -17,7 +17,15 @@ class Match extends React.Component {
             renderedFriend: true,
             currentMatch: randomFriend
         })
-        console.log("currentUser", this.props.currentUser, "randomFriend:", randomFriend)
+    }
+
+    addFriend=()=>{
+
+
+    }
+
+    addFriend=()=>{
+        console.log( console.log("currentUser", this.props.currentUser, "randomFriend:", this.state.currentMatch))
     }
 
     componentDidMount(){
@@ -44,7 +52,7 @@ class Match extends React.Component {
                     {this.state.renderedFriend?
                     <div>
                         <div>
-                        <img src={this.state.currentMatch.profile_picture} className="potential-match-photo"/>
+                        <img src={this.state.currentMatch.profile_picture} className="potential-match-photo" alt=""/>
                         </div>
                         <div>
                             Username:

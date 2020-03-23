@@ -9,7 +9,7 @@ class GameCard extends React.Component {
             
             <div className="game-card">
                 <div>
-                    <img src={this.props.game.cover_art} className="card-photo"/>
+                    <img src={this.props.game.cover_art} className="card-photo" alt=""/>
                 </div>
 
                 <div>

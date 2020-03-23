@@ -71,7 +71,7 @@ class Games extends React.Component{
              <div>
 
                 <div>
-                    <img src={this.state.searchedGame.background_image} className="game-art"/>
+                    <img src={this.state.searchedGame.background_image} className="game-art" alt=""/>
                 </div>
 
                 <div>
