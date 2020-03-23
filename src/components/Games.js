@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/Games.css';
+import Navbar from '../containers/Navbar'
 
 class Games extends React.Component{
 
@@ -56,6 +57,7 @@ class Games extends React.Component{
     render() {
         return (
             <div>
+                <Navbar />
             <div>
                 <h3>Search for a game</h3>
 
