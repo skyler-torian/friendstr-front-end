@@ -13,6 +13,9 @@ import Navbar from './containers/Navbar'
 import Games from './components/Games'
 import MyGames from './containers/MyGames'
 import SignUp from './containers/SignUp'
+import FavGames from './containers/FavGames'
+import FavGameCard from './containers/FavGameCard'
+
 
 import './App.css';
 
@@ -54,7 +57,6 @@ handleLogout = () => {
   this.setState =({
     currentUser: null
   })
-  (<Redirect to='/'/>)
   
 }
 
@@ -105,7 +107,6 @@ handleLogout = () => {
 
 
             <Route exact path='/mygames'>
-              <Navbar handleLogout={this.handleLogout}/>
               <MyGames currentUser={this.state.currentUser}/>
             </Route>
           

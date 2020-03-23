@@ -3,3 +3,7 @@
     max-width: 40vw;
     height: auto;
 }
+
+.game-display{
+    float: right;
+}

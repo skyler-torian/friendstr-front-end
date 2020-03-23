@@ -1,27 +1,23 @@
 import React from 'react'
+import FavGameCard from './FavGameCard'
 
 class FavGames extends React.Component {
     render() {
-
-        state={
-            favGames: []
-        }
+        let games = this.props.games
+        let randomGames = games[Math.floor(Math.random() * games.length)]
         
-        componentDidMount(){
-            let currentUser = this.props.currentUser.id
-             fetch(`http://localhost:3000/users/${currentUser}`)
-             .then(res => res.json())
-             .then(data => this.setState({
-                 favGames: data
-             }))
-            }
-            
+
         return (
-            <div>
-                <FavGameCard />
+            
+        <div className="fav-game">
+           <div>return <FavGameCard favGame={randomGames}/></div>
+            
             </div>
         )
     }
 }
+        
+       
+
 
 export default FavGames 

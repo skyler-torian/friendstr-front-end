@@ -1,5 +1,6 @@
 import React from 'react'
 import ShowGame from './ShowGame'
+import Navbar from './Navbar'
 import '../css/GameCard.css';
 
 class MyGames extends React.Component {
@@ -22,6 +23,9 @@ class MyGames extends React.Component {
     render() {
         return (
             <div>
+                <Navbar />
+            <div>
+                
                 {this.props.currentUser?
             <div className="my-games">
                 {this.state.myGames.map((game) =>{
@@ -34,6 +38,7 @@ class MyGames extends React.Component {
                 </div> : <p>It doesnt look like you have any games! Try liking one!</p> }
 
                
+                </div>
                 </div>
         )
     }

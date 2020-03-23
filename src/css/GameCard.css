@@ -2,11 +2,13 @@
 
 .card-photo{
     background-color: purple;
+    border: 5px solid lightslategray;
     max-width: 175px;
     height: 125px;
 }
 
 .game-card{
+    padding: 25px;
     float: left;
     width: 25%;
     padding: 20px 20px
