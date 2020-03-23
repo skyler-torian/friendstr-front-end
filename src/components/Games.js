@@ -79,10 +79,10 @@ class Games extends React.Component{
                     <p>Select a Platform</p>
                     <form>
                     <select onChange={(e)=> this.platformHandler(e)}>
-                        <option defaultValue="Unkown">Choose a Platform</option>
-                    <option value="Xbox">Xbox</option>
-                    <option value="Playstation 4">Playstation 4</option>
-                    <option value="PC">PC</option>
+                        <option defaultValue="Unknown">Choose a Platform</option>
+                        <option value="Playstation 4">Playstation 4</option>
+                        <option value="Xbox">Xbox</option>
+                        <option value="PC">PC</option>
                     </select>
                     <button type="submit" onClick={(e)=>this.collectionHandler(e)}>Add to Collection</button>
                     </form>
