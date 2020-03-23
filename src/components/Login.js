@@ -23,12 +23,15 @@ class Login extends React.Component {
         }
         return (
             <div>
+                <h3>Please enter your username and password:</h3>
+            <div>
                 <form onSubmit={this.handleButton} >
                 <input type='text' placeholder="username"/>
                 <input type='password' placeholder="password"/>
                 <input type='submit' value='Login'/>
                    
                 </form>
+            </div>
             </div>
         )
     }

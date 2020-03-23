@@ -1,4 +1,7 @@
 import React from 'react'
+import {
+    Link
+} from "react-router-dom";
 
 class SignUp extends React.Component {
 
@@ -64,6 +67,11 @@ class SignUp extends React.Component {
         return (
             <div>
                 <div>
+                    <div>
+                        <button>
+                            <Link to='/'>Back to Home</Link> 
+                        </button>
+                     </div>
                     <h4>
                         Sign up for an account:
                     </h4>
