@@ -9,12 +9,11 @@ import {
 import Profile from './components/Profile'
 import Login from './components/Login'
 import Home from './components/Home'
-import Navbar from './containers/Navbar'
+import Match from './components/Match'
 import Games from './components/Games'
 import MyGames from './containers/MyGames'
 import SignUp from './containers/SignUp'
-import FavGames from './containers/FavGames'
-import FavGameCard from './containers/FavGameCard'
+
 
 
 import './App.css';
@@ -22,16 +21,16 @@ import './App.css';
 class App extends React.Component {
   
  state = {
-   currentUser: null
-    // currentUser:{ 
-    // bio:"Just here to have some fun. I love playing Destiny 2",
-    // created_at:"2020-03-10T21:12:03.954Z",
-    // id:7,
-    // name:"Skyler",
-    // profile_picture:"none.jpg",
-    // updated_at:"2020-03-10T21:12:03.954Z",
-    // username:"skyler1"
-    // }
+  //  currentUser: null
+    currentUser:{ 
+    bio:"Just here to have some fun. I love playing Destiny 2",
+    created_at:"2020-03-10T21:12:03.954Z",
+    id:7,
+    name:"Skyler",
+    profile_picture:"none.jpg",
+    updated_at:"2020-03-10T21:12:03.954Z",
+    username:"skyler1"
+    }
     
   }
 
@@ -57,7 +56,7 @@ handleLogout = () => {
   this.setState =({
     currentUser: null
   })
-  
+  this.forceUpdate()
 }
 
 
@@ -103,7 +102,13 @@ handleLogout = () => {
             </Route>
 
            
-
+            <Route exact path="/match" render={()=>{
+              return !this.state.currentUser? 
+              <Redirect to='/'/> :
+              <Match currentUser={this.state.currentUser} toGames={this.handleRouteToGames} handleLogout={this.handleLogout}/>
+              
+            }}>
+            </Route>
 
 
             <Route exact path='/mygames'>

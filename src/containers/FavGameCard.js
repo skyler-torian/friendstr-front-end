@@ -1,4 +1,5 @@
 import React from 'react'
+import '../css/FavGameCard.css';
 
 class FavGameCard extends React.Component {
     
@@ -7,11 +8,19 @@ class FavGameCard extends React.Component {
     render() {
         let favoriteGame = this.props.favGame
         console.log("in favgamecard:", this.props.favGame)
+
         return (
+            
             <div className="profile-game-card">
+                <div><h3>Recently Played: </h3></div>
                 <div className="profile-game-image">
                   <div>{favoriteGame? 
-                    favoriteGame.name :
+                    <div className="fav-game-card">  
+                        <img src={favoriteGame.cover_art} className="fav-game-image"/>
+                    <div>
+                        {favoriteGame.name}
+                    </div>   
+                        </div> :
                     null
                    }</div>
                 </div>

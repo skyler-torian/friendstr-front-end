@@ -10,7 +10,7 @@ class FavGames extends React.Component {
         return (
             
         <div className="fav-game">
-           <div>return <FavGameCard favGame={randomGames}/></div>
+           <div><FavGameCard favGame={randomGames}/></div>
             
             </div>
         )
