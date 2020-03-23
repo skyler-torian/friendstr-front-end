@@ -44,7 +44,7 @@ class Profile extends React.Component {
             </div>
             <div>
                 <button>
-                    <Link to='/match'>Find Friends</Link>
+                    <Link to='/match' currentUser={this.props.currentUser}>Find Friends</Link>
                 </button>
             </div>
             <div>

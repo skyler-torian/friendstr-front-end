@@ -17,6 +17,7 @@ class Match extends React.Component {
             renderedFriend: true,
             currentMatch: randomFriend
         })
+        console.log("currentUser", this.props.currentUser, "randomFriend:", randomFriend)
     }
 
     componentDidMount(){
