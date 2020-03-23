@@ -1,5 +1,5 @@
 import React from 'react';
-import Fragment from 'react'
+
 import {
   BrowserRouter as Router,
   Switch,

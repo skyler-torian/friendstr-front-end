@@ -7,8 +7,7 @@ class FavGameCard extends React.Component {
 
     render() {
         let favoriteGame = this.props.favGame
-        console.log("in favgamecard:", this.props.favGame)
-
+    
         return (
             
             <div className="profile-game-card">
