@@ -20,13 +20,26 @@ class Match extends React.Component {
     }
 
     addFriend=()=>{
-
-
-    }
-
-    addFriend=()=>{
-        console.log( console.log("currentUser", this.props.currentUser, "randomFriend:", this.state.currentMatch))
-    }
+        let user = this.props.currentUser.id
+        let friend = this.state.currentMatch.id
+        let status = 1
+        fetch('http://localhost:3000/user_friends',{
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+             },
+             body: JSON.stringify({
+                 user_id: user, friend_id: friend,
+                 status: status
+             })
+            }
+         
+         
+            )
+             
+         }
+    
 
     componentDidMount(){
         fetch('http://localhost:3000/users')
@@ -62,7 +75,7 @@ class Match extends React.Component {
                         { this.state.currentMatch.bio} 
                         </div>
                         <div>
-                        <input type="button" value="Be Friends?" onClick={this.addFriend}></input>
+                        <input type="button" value="Be Friends?" onClick={()=> this.addFriend()}></input>
                         <input type="button" value="Nah" onClick={()=>this.findFriend()}></input>
                         </div>
                         
