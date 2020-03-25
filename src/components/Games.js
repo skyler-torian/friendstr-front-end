@@ -63,7 +63,7 @@ class Games extends React.Component{
     render() {
         return (
             <div>
-                <Navbar />
+                <Navbar currentUser={this.props.currentUser} handleLogout={this.props.handleLogout}/>
             <div>
                 <h3>Search for a game</h3>
 
@@ -86,23 +86,23 @@ class Games extends React.Component{
                     <form>
                     <select onChange={(e)=> this.platformHandler(e)}>
                         <option defaultValue="Unknown">Choose a Platform</option>
-                        <option value="Playstation 4">Playstation 4</option>
-                        <option value="Xbox One">Xbox One</option>
-                        <option value="Xbox">Xbox</option>
                         <option value="PC">PC</option>
-                        <option value="Switch">Switch</option>
-                        <option value="Super Nintendo">Super Nintendo</option>
-                        <option value="NES">NES</option>
+                        <option value="Playstation 4">Playstation 4</option>
                         <option value="Playstation 3">Playstation 3</option>
                         <option value="Playstation 2">Playstation 2</option>
                         <option value="Playstation 1">Playstation 1</option>
-                        <option value="Sega Genesis">Sega Genesis</option>
+                        <option value="Xbox One">Xbox One</option>
+                        <option value="Xbox">Xbox</option>
+                        <option value="Switch">Switch</option>
+                        <option value="Wii U">Wii U</option>
                         <option value="3DS">3DS</option>
+                        <option value="Wii">Wii</option>
                         <option value="Gamecube">Gamecube</option>
                         <option value="Nintendo 64">Nintendo 64</option>
-                        <option value="Wii">Wii</option>
-                        <option value="Wii U">Wii U</option>
+                        <option value="Super Nintendo">Super Nintendo</option>
+                        <option value="NES">NES</option>
                         <option value="Dreamcast">Dreamcast</option>
+                        <option value="Sega Genesis">Sega Genesis</option>
                         
                     </select>
                     <button type="submit" onClick={(e)=>this.collectionHandler(e)}>Add to Collection</button>
