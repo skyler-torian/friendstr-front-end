@@ -23,7 +23,7 @@ class MyGames extends React.Component {
     render() {
         return (
             <div>
-                <Navbar />
+                <Navbar handleLogout={this.props.handleLogout}/>
             <div>
                 
                 {this.props.currentUser?
