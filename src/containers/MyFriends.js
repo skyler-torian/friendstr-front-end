@@ -1,9 +1,13 @@
 import React from 'react'
+import FriendProfileCard from './FriendProfileCard'
 
 class MyFriends extends React.Component {
     render() {
         return (
-            <div>MyFriends Container</div>
+            <div>
+                
+                <FriendProfileCard />
+            </div>
         )
     }
 }

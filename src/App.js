@@ -13,6 +13,7 @@ import Match from './components/Match'
 import Games from './components/Games'
 import MyGames from './containers/MyGames'
 import SignUp from './containers/SignUp'
+import MyFriends from './containers/MyFriends'
 
 
 
@@ -101,6 +102,14 @@ handleLogout = () => {
               return !this.state.currentUser? 
               <Redirect to='/'/> :
                 <Games currentUser={this.state.currentUser}/>
+             
+            }}>
+            </Route>
+
+            <Route exact path="/myfriends" render={()=>{
+              return !this.state.currentUser? 
+              <Redirect to='/'/> :
+                <MyFriends currentUser={this.state.currentUser}/>
              
             }}>
             </Route>

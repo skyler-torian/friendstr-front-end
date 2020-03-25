@@ -3,10 +3,11 @@ import {
     Link
 } from "react-router-dom";
 import FavGames from '../containers/FavGames'
+
 import '../css/Profile.css';
 
 import Navbar from '../containers/Navbar'
-// import Games from '../components/Games'
+
 
 class Profile extends React.Component {
 
@@ -40,19 +41,30 @@ class Profile extends React.Component {
 
                 <p>Bio: {this.props.currentUser.bio}</p>
             <div>
-                <button>
-                    <Link to='/mygames'>My Games Collection</Link>
-                </button>
+                <div className="my-stuff">
+                    <button>
+                        <Link to='/mygames'>My Games</Link>
+                    </button>
+                </div>
+                <div>
+                    <button>
+                        <Link to='/myfriends'>My Friends</Link>
+                    </button>
+                </div>
             </div>
+
             <div>
-                <button>
-                    <Link to='/match' currentUser={this.props.currentUser}>Find Friends</Link>
-                </button>
-            </div>
-            <div>
-                <button>
-                <Link to='/games'>Find Games</Link> 
-                </button>
+                <div>
+                    <button>
+                        <Link to='/match' currentUser={this.props.currentUser}>Find Friends</Link>
+                    </button>
+                </div>
+
+                <div className="find-stuff">
+                    <button>
+                        <Link to='/games'>Find Games</Link> 
+                    </button>
+                </div>
             </div>
 
             <div className="game-display">
@@ -63,13 +75,15 @@ class Profile extends React.Component {
                 null
 
                 
-                } </div> : null }
+                } 
+            </div> : null }
+            
             </div>
-            
-            
-            
-        )
+            )
+        }
     }
-}
-
-export default Profile
+    
+    export default Profile
+            
+            
+            
