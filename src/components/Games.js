@@ -81,8 +81,24 @@ class Games extends React.Component{
                     <select onChange={(e)=> this.platformHandler(e)}>
                         <option defaultValue="Unknown">Choose a Platform</option>
                         <option value="Playstation 4">Playstation 4</option>
+                        <option value="Xbox One">Xbox One</option>
                         <option value="Xbox">Xbox</option>
                         <option value="PC">PC</option>
+                        <option value="Switch">Switch</option>
+                        <option value="Super Nintendo">Super Nintendo</option>
+                        <option value="NES">NES</option>
+                        <option value="Playstation 3">Playstation 3</option>
+                        <option value="Playstation 2">Playstation 2</option>
+                        <option value="Playstation 1">Playstation 1</option>
+                        <option value="Sega Genesis">Sega Genesis</option>
+                        <option value="3DS">3DS</option>
+                        <option value="Gamecube">Gamecube</option>
+                        <option value="Gameboy">Gameboy</option>
+                        <option value="Nintendo 64">Nintendo 64</option>
+                        <option value="Wii">Wii</option>
+                        <option value="Wii U">Wii U</option>
+                        <option value="Dreamcast">Dreamcast</option>
+                        
                     </select>
                     <button type="submit" onClick={(e)=>this.collectionHandler(e)}>Add to Collection</button>
                     </form>
