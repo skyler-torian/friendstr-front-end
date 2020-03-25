@@ -5,20 +5,17 @@ import {
 
 class Login extends React.Component {
 
-    state={
-        redirect: false
-    }
+    // state={
+    //     redirect: false
+    // }
 
     handleButton=(e)=>{
         e.preventDefault()
         this.props.handleLogin(e)
-        this.setState({
-            redirect: true
-        })
     }
 
     render() {
-        if(this.state.redirect){
+        if(this.props.currentUserCheck){
             return <Redirect to='/profile'/>
         }
         return (

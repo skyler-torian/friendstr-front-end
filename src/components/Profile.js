@@ -26,7 +26,9 @@ class Profile extends React.Component {
 
         
     render() {
-    return (
+        return (
+            <div>
+            {this.props.currentUser?
             <div>
                 <Navbar currentUser={this.props.currentUser} handleLogout={this.props.handleLogout}/>
                 
@@ -56,11 +58,12 @@ class Profile extends React.Component {
             <div className="game-display">
                    <FavGames games={this.state.games}/>
             </div>
-
-                </div> : 
+                    </div>
+                 : 
                 null
+
                 
-    }  
+                } </div> : null }
             </div>
             
             

@@ -33,7 +33,13 @@ class SignUp extends React.Component {
              })
             }
             )
-        }
+            .then(res => res.json())
+            .then(user => {
+              if(user.message){
+                alert(user.message[0])}
+            })}
+              
+       
          
          
     nameHandler=(e)=>{

@@ -21,7 +21,8 @@ import './App.css';
 class App extends React.Component {
   
  state = {
-   currentUser: null
+   currentUser: null,
+   redirect: false
     // currentUser:{ 
     // bio:"Just here to have some fun. I love playing Destiny 2",
     // created_at:"2020-03-10T21:12:03.954Z",
@@ -48,7 +49,8 @@ handleLogin = (event) => {
     })
 }).then(res => res.json())
 .then(data => this.setState({
-  currentUser: data
+  currentUser: data,
+  redirect: true
 }))}
 
 //function is called, but user isn't actually set to null. Also needs to redirect to / when there is no user
@@ -76,7 +78,9 @@ handleLogout = () => {
             </Route>
 
             <Route exact path='/login'> 
-              <Login handleLogin={this.handleLogin}/>
+              <Login handleLogin={this.handleLogin}
+              currentUserCheck={this.state.redirect}
+              />
             </Route>
 
             <Route exact path='/signup'>
