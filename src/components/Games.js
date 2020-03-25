@@ -27,9 +27,15 @@ class Games extends React.Component{
        })
     }
 
+        
+    alertHandler=()=>{
+        alert("Game has been added to your collection")
+    }
+
 
     collectionHandler=(e)=>{
         e.preventDefault()
+        this.alertHandler()
         let gameName = this.state.searchedGame.name
         let gameGenre = this.state.searchedGame.genres[0].name
         let gameDesc = this.state.searchedGame.description_raw
@@ -48,11 +54,11 @@ class Games extends React.Component{
             user_id:userId, desc:gameDesc, genre:gameGenre, name:gameName, apiGameId:apiKey, coverArt:coverArt, platform: platform
         })
        }
+       )}
     
-    
-       )
+       
         
-    }
+    
 
     render() {
         return (
@@ -93,7 +99,6 @@ class Games extends React.Component{
                         <option value="Sega Genesis">Sega Genesis</option>
                         <option value="3DS">3DS</option>
                         <option value="Gamecube">Gamecube</option>
-                        <option value="Gameboy">Gameboy</option>
                         <option value="Nintendo 64">Nintendo 64</option>
                         <option value="Wii">Wii</option>
                         <option value="Wii U">Wii U</option>

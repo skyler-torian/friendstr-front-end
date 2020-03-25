@@ -58,7 +58,7 @@ handleLogout = () => {
   this.setState =({
     currentUser: null
   })
-  this.forceUpdate()
+ window.location.reload(false)
 }
 
 
