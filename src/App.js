@@ -109,7 +109,7 @@ handleLogout = () => {
             <Route exact path="/myfriends" render={()=>{
               return !this.state.currentUser? 
               <Redirect to='/'/> :
-                <MyFriends currentUser={this.state.currentUser}/>
+                <MyFriends currentUser={this.state.currentUser} handleLogout={this.handleLogout}/>
              
             }}>
             </Route>
@@ -123,11 +123,10 @@ handleLogout = () => {
             }}>
             </Route>
 
-
             <Route exact path="/mygames" render={()=>{
               return !this.state.currentUser? 
               <Redirect to='/'/> :
-              <MyGames currentUser={this.state.currentUser} handleLogout={this.handleLogout}/>
+              <MyFriends currentUser={this.state.currentUser} handleLogout={this.handleLogout}/>
               
             }}>
             </Route>

@@ -5,7 +5,7 @@ import {
 import FavGames from '../containers/FavGames'
 
 import '../css/Profile.css';
-
+// import { Card, Icon, Image } from 'semantic-ui-react'
 import Navbar from '../containers/Navbar'
 
 
@@ -48,7 +48,8 @@ class Profile extends React.Component {
                 </div>
                 <div>
                     <button>
-                        <Link to='/myfriends' currentUser={this.props.currentUser}>My Friends</Link>
+                        <Link to='/myfriends' currentUser={this.props.currentUser}
+                        handleLogout={this.props.handleLogout}>My Friends</Link>
                     </button>
                 </div>
             </div>

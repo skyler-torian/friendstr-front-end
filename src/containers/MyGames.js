@@ -10,8 +10,6 @@ class MyGames extends React.Component {
     }
 
     removeGame=(user_id, game_id)=>{
-        
-        // e.preventDefault()
         let gameId = game_id
         let userId = user_id
         fetch('http://localhost:3000/mygames/remove',{

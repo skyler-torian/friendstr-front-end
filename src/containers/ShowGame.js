@@ -2,26 +2,6 @@ import React from 'react'
 
 class GameCard extends React.Component {
 
-    // removeGame=(e)=>{
-    //     e.preventDefault()
-    //     let gameId = this.props.game.id
-    //     let userId = this.props.currentUser.id
-    //     fetch('http://localhost:3000/mygames/remove',{
-    //         method: "POST",
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //             'Accept': 'application/json'
-    //          },
-    //          body: JSON.stringify({
-    //              user_id:userId, game_id:gameId
-    //          })
-    //         }
-    //         ).then(res => res.json())
-    //         .then(data => {debugger})
-    //     }
-        
-    
-
     render() {
         return (
             
