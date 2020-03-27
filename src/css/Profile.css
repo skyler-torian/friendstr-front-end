@@ -1,11 +1,22 @@
 .profile-photo{
-    background-color: black;
+    padding: 10px;
     max-width: 40vw;
     height: auto;
 }
 
+.user-bio{
+    padding: 10px;
+    word-wrap: break-word;
+    max-width: 40vw;
+}
+
+.username{
+    padding: 10px;
+}
+
 .game-display{
-    float: right;
+    padding: 10px;
+    float: left;
 }
 
 
