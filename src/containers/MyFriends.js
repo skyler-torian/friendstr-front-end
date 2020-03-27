@@ -1,6 +1,8 @@
 import React from 'react'
 import FriendProfileCard from './FriendProfileCard'
 import Navbar from './Navbar'
+import '../css/MyFriends.css'
+
 class MyFriends extends React.Component {
 
     state={
@@ -24,7 +26,7 @@ class MyFriends extends React.Component {
                 <Navbar handleLogout={this.props.handleLogout}/>
             </div>
             
-            <div>
+            <div className="friend-card">
                 {this.state.friends.map((friend) => {
                     return <FriendProfileCard
                         key={friend.id}

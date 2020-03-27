@@ -2,14 +2,15 @@ import React from 'react'
 import {
     Link
   } from "react-router-dom";
+  import '../css/Profile.css';
 
 class Navbar extends React.Component {
     render() {
         return (
-            <div>
+            <div className="navbar">
                 
             <div>
-                <h3>Friendstr</h3>
+                <h2 className="name">Friendstr</h2>
             </div>
 
             <button type="submit" placeholder="Logout" onClick={(e)=>this.props.handleLogout(e)}>Logout

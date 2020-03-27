@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/MyFriends.css'
+
 
 class FriendProfileCard extends React.Component {
     render() {
