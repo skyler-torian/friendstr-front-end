@@ -4,3 +4,8 @@
     max-width: 175px;
     height: 125px;
 }
+
+.fav-game-name{
+    word-wrap: break-word;
+    max-width: 175px;
+}

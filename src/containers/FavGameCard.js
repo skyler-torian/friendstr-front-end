@@ -16,7 +16,7 @@ class FavGameCard extends React.Component {
                   <div>{favoriteGame? 
                     <div className="fav-game-card">  
                         <img src={favoriteGame.cover_art} className="fav-game-image" alt=""/>
-                    <div>
+                    <div className="fav-game-name">
                         {favoriteGame.name}
                     </div>   
                         </div> :
