@@ -12,13 +12,15 @@ class Navbar extends React.Component {
             <div>
                 <h2 className="name">Friendstr</h2>
             </div>
-
-            <button type="submit" placeholder="Logout" onClick={(e)=>this.props.handleLogout(e)}>Logout
+            <div className="nav-buttons">
+            <button type="submit" 
+            placeholder="Logout" onClick={(e)=>this.props.handleLogout(e)}>Logout
             </button>
 
             <button>
                 <Link to='/profile'>Profile</Link>
             </button>
+            </div>
 
             </div>
         )

@@ -1,4 +1,62 @@
-/* body{
-    background-image: url("./images/home-page-background.jpg");
+body{
+    background-image: url("https://images.pexels.com/photos/139306/pexels-photo-139306.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
     background-size: contain;
+  }
+
+  .welcome-banner{
+      font-weight: bold;
+      position: absolute;
+      left: 50%;
+      margin-left: -50px;
+  }
+
+  .home-buttons{
+      padding: 10px;
+
+  }
+
+  .login-banner{
+      font-weight: bold;
+      margin: 3px;
+      padding: 10px;
+  }
+
+  .name{
+      padding: 10px;
+      float: right;
+  }
+
+  .nav-buttons{
+      padding: 15px;
+  }
+
+  .username{
+      padding: 15px;
+  }
+
+  .my-games{
+    margin-left: 7px;
+      padding:3px;
+  }
+
+  .my-friends{
+    margin-left: 7px;
+    padding:3px;
+  }
+
+  .find-stuff{
+    margin-left: 7px;
+    padding:3px;
+  }
+
+  .match-button{
+    margin-left: 7px;
+    padding:3px;
+  }
+
+  .user-bio{
+      font-weight: bold;
+  }
+
+  /* .profile-photo
   } */

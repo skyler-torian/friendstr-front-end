@@ -35,7 +35,7 @@ class Profile extends React.Component {
                 
                 {this.props.currentUser? 
                 <div>
-                    
+
                 <h3 className="username">{this.props.currentUser.username}'s profile</h3>
                 
                 <img src={this.props.currentUser.profile_picture} alt="A thing" className="profile-photo"/>
@@ -43,12 +43,12 @@ class Profile extends React.Component {
                 <p className="user-bio">Bio: {this.props.currentUser.bio}</p>
 
             <div>
-                <div className="my-stuff">
+                <div className="my-games">
                     <button>
                         <Link to='/mygames'>My Games</Link>
                     </button>
                 </div>
-                <div>
+                <div className="my-friends">
                     <button>
                         <Link to='/myfriends' currentUser={this.props.currentUser}
                         handleLogout={this.props.handleLogout}>My Friends</Link>
@@ -57,7 +57,7 @@ class Profile extends React.Component {
             </div>
 
             <div>
-                <div>
+                <div className='match-button'>
                     <button>
                         <Link to='/match' currentUser={this.props.currentUser}>Find Friends</Link>
                     </button>
