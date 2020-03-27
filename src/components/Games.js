@@ -64,7 +64,7 @@ class Games extends React.Component{
         return (
             <div>
                 <Navbar currentUser={this.props.currentUser} handleLogout={this.props.handleLogout}/>
-            <div>
+            <div className="game-search">
                 <h3>Search for a game</h3>
 
                 <form onSubmit={(e)=> this.handleGameSearch(e)}>
@@ -76,11 +76,11 @@ class Games extends React.Component{
                 {this.state.searchedGame? 
              <div>
 
-                <div>
+                <div className="searched-game">
                     <img src={this.state.searchedGame.background_image} className="game-art" alt=""/>
                 </div>
 
-                <div>
+                <div className='platform-select'>
                 
                     <p>Select a Platform</p>
                     <form>

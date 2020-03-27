@@ -64,6 +64,18 @@ body{
       word-wrap: break-word;
   }
 
+  .game-search{
+      padding: 10px;
+  }
+
+  .searched-game{
+      padding: 10px;
+  }
+
+  .platform-select{
+    padding: 10px;
+  }
+
   /* .card-photo{
 
   } */
