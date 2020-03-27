@@ -9,7 +9,7 @@ class Navbar extends React.Component {
             <div>
                 
             <div>
-                <h3>Friendstr!</h3>
+                <h3>Friendstr</h3>
             </div>
 
             <button type="submit" placeholder="Logout" onClick={(e)=>this.props.handleLogout(e)}>Logout

@@ -126,7 +126,7 @@ handleLogout = () => {
             <Route exact path="/mygames" render={()=>{
               return !this.state.currentUser? 
               <Redirect to='/'/> :
-              <MyFriends currentUser={this.state.currentUser} handleLogout={this.handleLogout}/>
+              <MyGames currentUser={this.state.currentUser} handleLogout={this.handleLogout}/>
               
             }}>
             </Route>
