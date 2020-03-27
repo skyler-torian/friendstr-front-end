@@ -1,5 +1,5 @@
 body{
-    background-image: url("https://images.pexels.com/photos/139306/pexels-photo-139306.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    background-image: url("https://images.pexels.com/photos/82256/pexels-photo-82256.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
     background-size: contain;
   }
 
@@ -57,6 +57,16 @@ body{
   .user-bio{
       font-weight: bold;
   }
+
+  .game-name{
+      font-weight: bold;
+      padding: 1px;
+      word-wrap: break-word;
+  }
+
+  /* .card-photo{
+
+  } */
 
   /* .profile-photo
   } */
