@@ -110,12 +110,13 @@ class Games extends React.Component{
                
                 </div>
 
-                <div><h3>{this.state.searchedGame.name}</h3></div>
+                <div className='game-info'>
+                    <h3>{this.state.searchedGame.name}</h3></div>
                     {this.state.searchedGame.genres?
-                <div>Genre: {this.state.searchedGame.genres.map((genre)=> { return genre.name+ " "})}</div> :
+                <div className='game-genre'>Genre: {this.state.searchedGame.genres.map((genre)=> { return genre.name+ " "})}</div> :
                 <p>Genres: Sorry! No genres were found for this title!</p>}
                     {this.state.searchedGame.description_raw?
-                <div><h5>Description:</h5> <p>{this.state.searchedGame.description_raw}</p></div> :
+                <div className='game-desc'><h5>Description:</h5> <p>{this.state.searchedGame.description_raw}</p></div> :
                 <div><h5>Description: </h5> <p>Unfortunately we don't have a description for this game right now...</p></div>}
             </div> : null }
            

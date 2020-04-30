@@ -76,6 +76,18 @@ body{
     padding: 10px;
   }
 
+  .game-info{
+    padding: 10px;
+  }
+
+  .game-genre{
+    padding: 10px;
+  }
+
+  .game-desc{
+    padding: 10px;
+  }
+
   /* .card-photo{
 
   } */
