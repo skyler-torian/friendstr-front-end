@@ -29,7 +29,7 @@ class Games extends React.Component{
 
         
     alertHandler=()=>{
-        alert("Game has been added to your collection")
+        alert(`${this.state.searchedGame.name} has been added to your collection`)
     }
 
 
