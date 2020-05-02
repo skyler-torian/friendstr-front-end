@@ -88,9 +88,22 @@ body{
     padding: 10px;
   }
 
-  /* .card-photo{
+  .friend-card{
+    padding: 10px;
+  }
 
+  /* .friend-profile-card{
+    padding: 10px;
   } */
+
+  .friend-profile-photo{
+    height: 100px;
+    width: 100px;
+  }
+
+  .friend-name{
+    padding: 5px;
+  }
 
   /* .profile-photo
   } */
