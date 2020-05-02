@@ -7,8 +7,8 @@ class FriendProfileCard extends React.Component {
         return (
             <div>  
                 <div className="friend-profile-card">
-                    <div className="friend-profile-photo">
-                        <img src={this.props.friend.profile_picture}/>
+                    <div>
+                        <img src={this.props.friend.profile_picture} className="friend-profile-photo"/>
                     </div>
                     <div className="friend-name">
                         {this.props.friend.name}

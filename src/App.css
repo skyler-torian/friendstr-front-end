@@ -92,16 +92,23 @@ body{
     padding: 10px;
   }
 
-  /* .friend-profile-card{
+  .friend-profile-card{
     padding: 10px;
-  } */
+    max-width: 260px;
+    float: left;
+  }
 
   .friend-profile-photo{
-    height: 100px;
-    width: 100px;
+    width: 250px;
+    height: 250px;
   }
 
   .friend-name{
+    padding: 5px;
+    font-weight: bold;
+  }
+
+  .friend-clicker{
     padding: 5px;
   }
 

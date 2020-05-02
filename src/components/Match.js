@@ -56,7 +56,7 @@ class Match extends React.Component {
                 <div>
                     <Navbar />
     
-                    <h3>
+                    <h3 className="friend-clicker">
                         Click Find a Friend to get started:
                     </h3>
                     <div>
