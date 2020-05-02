@@ -17,7 +17,7 @@ class Navbar extends React.Component {
             placeholder="Logout" onClick={(e)=>this.props.handleLogout(e)}>Logout
             </button>
 
-            <button>
+            <button className='profile-button'>
                 <Link to='/profile'>Profile</Link>
             </button>
             </div>
