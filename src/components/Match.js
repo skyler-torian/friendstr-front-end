@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../containers/Navbar'
-import '../css/Match.css'
+
 
 class Match extends React.Component {
 
