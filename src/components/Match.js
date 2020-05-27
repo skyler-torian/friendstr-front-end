@@ -76,7 +76,7 @@ class Match extends React.Component {
                             <div className="match-bio"> A little about me: 
                             { this.state.currentMatch.bio} 
                             </div>
-                            <div>
+                            <div className="be-friends-buttons">
                             <input type="button" value="Be Friends?" onClick={()=> this.addFriend()}></input>
                             <input type="button" value="Nah" onClick={()=>this.findFriend()}></input>
                             </div>
