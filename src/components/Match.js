@@ -69,11 +69,11 @@ class Match extends React.Component {
                             <div>
                             <img src={this.state.currentMatch.profile_picture} className="potential-match-photo" alt=""/>
                             </div>
-                            <div>
+                            <div className="match-username">
                                 Username:
                                 { this.state.currentMatch.username}
                             </div>
-                            <div> A little about me: 
+                            <div className="match-bio"> A little about me: 
                             { this.state.currentMatch.bio} 
                             </div>
                             <div>

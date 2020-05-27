@@ -131,5 +131,14 @@ body{
   height: auto
 }
 
+.match-username{
+  padding: 10px;
+}
+
+.match-bio{
+  padding: 10px;
+  
+}
+
   /* .profile-photo
   } */
